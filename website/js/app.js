@@ -1,6 +1,6 @@
 // Awesome Tech Repos 2026 - Website JavaScript
 
-const API_BASE_URL = 'data';
+const API_BASE_URL = './data';
 
 // State
 let allRepositories = [];
