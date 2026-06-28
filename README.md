@@ -9,25 +9,25 @@ A curated collection of **1000 high-quality GitHub repositories** organized by t
 ---
 
 <a name="english"></a>
-## 🌟 English
+## English
 
 ### Overview
 
 **Awesome Tech Repos 2026** is a comprehensive, curated database of open-source repositories across 12 major technology domains. Each repository is carefully selected based on strict quality criteria:
 
-- ⭐ **Minimum 5,000 stars** (with exceptions for specialized niches)
-- 🔄 **Active development** (updated within 6 months)
-- 📚 **Good documentation** and active community
-- 🎯 **Relevant in 2026** and beyond
-- 🚫 **No duplicates** (one tool per dominant use case)
+- **Minimum 5,000 stars** (with exceptions for specialized niches)
+- **Active development** (updated within 6 months)
+- **Good documentation** and active community
+- **Relevant in 2026** and beyond
+- **No duplicates** (one tool per dominant use case)
 
 ### Project Goals
 
-- 📊 Reach **1,000 high-quality repositories** across all tech domains
-- 🎓 Help developers discover the best learning resources
-- 🤍 Guide contributors to impactful open-source projects
-- 🛠️ Maintain a clean, scalable, and professional structure
-- 🤖 Automate data management and updates
+- Reach **1,000 high-quality repositories** across all tech domains
+- Help developers discover the best learning resources
+- Guide contributors to impactful open-source projects
+- Maintain a clean, scalable, and professional structure
+- Automate data management and updates
 
 ### Categories
 
@@ -175,8 +175,8 @@ The project includes automated workflows:
 - [x] Convert existing Markdown data to JSON
 - [x] Create validation and update scripts
 - [x] Implement repository discovery automation
-- [x] Reach 1,000 repositories across all categories ✅ **COMPLETED**
-- [ ] Build GitHub Pages website
+- [x] Reach 1,000 repositories across all categories - **COMPLETED**
+- [x] Build GitHub Pages website
 - [ ] Add advanced filtering and search
 - [ ] Implement contribution analytics
 
@@ -186,14 +186,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Acknowledgments
 
-- Built with ❤️ for the open-source community
+- Built for the open-source community
 - Inspired by various "awesome lists" on GitHub
 - Data sourced from GitHub API
 
 ---
 
 <a name="français"></a>
-## 🌟 Français
+## Français
 
 ![Awesome Tech Repos 2026 Banner](banner.jpg)
 
@@ -201,19 +201,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Awesome Tech Repos 2026** est une base de données complète et curated de dépôts open-source sur 12 domaines technologiques majeurs. Chaque dépôt est soigneusement sélectionné selon des critères de qualité stricts :
 
-- ⭐ **Minimum 5 000 étoiles** (avec exceptions pour les niches spécialisées)
-- 🔄 **Développement actif** (mis à jour dans les 6 derniers mois)
-- 📚 **Bonne documentation** et communauté active
-- 🎯 **Pertinent en 2026** et au-delà
-- 🚫 **Pas de doublons** (un seul outil par cas d'usage dominant)
+- **Minimum 5 000 étoiles** (avec exceptions pour les niches spécialisées)
+- **Développement actif** (mis à jour dans les 6 derniers mois)
+- **Bonne documentation** et communauté active
+- **Pertinent en 2026** et au-delà
+- **Pas de doublons** (un seul outil par cas d'usage dominant)
 
 ### Objectifs du Projet
 
-- 📊 Atteindre **1 000 dépôts de haute qualité** dans tous les domaines tech
-- 🎓 Aider les développeurs à découvrir les meilleures ressources d'apprentissage
-- 🤍 Guider les contributeurs vers des projets open-source impactants
-- 🛠️ Maintenir une structure propre, scalable et professionnelle
-- 🤖 Automatiser la gestion et la mise à jour des données
+- Atteindre **1 000 dépôts de haute qualité** dans tous les domaines tech
+- Aider les développeurs à découvrir les meilleures ressources d'apprentissage
+- Guider les contributeurs vers des projets open-source impactants
+- Maintenir une structure propre, scalable et professionnelle
+- Automatiser la gestion et la mise à jour des données
 
 ### Catégories
 
@@ -361,8 +361,8 @@ Le projet inclut des workflows automatisés :
 - [x] Conversion des données Markdown existantes en JSON
 - [x] Création des scripts de validation et de mise à jour
 - [x] Implémentation de l'automatisation de découverte de dépôts
-- [x] Atteindre 1 000 dépôts dans toutes les catégories ✅ **TERMINÉ**
-- [ ] Construire un site GitHub Pages
+- [x] Atteindre 1 000 dépôts dans toutes les catégories - **TERMINÉ**
+- [x] Construire un site GitHub Pages
 - [ ] Ajouter un filtrage et une recherche avancés
 - [ ] Implémenter des analytics de contribution
 
@@ -372,7 +372,7 @@ Ce projet est licencié sous la Licence MIT - voir le fichier [LICENSE](LICENSE)
 
 ### Remerciements
 
-- Construit avec ❤️ pour la communauté open-source
+- Construit pour la communauté open-source
 - Inspiré par diverses "awesome lists" sur GitHub
 - Données sourcées depuis l'API GitHub
 

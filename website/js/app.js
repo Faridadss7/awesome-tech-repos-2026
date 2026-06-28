@@ -84,10 +84,11 @@ function renderCategories(categories) {
     const grid = document.createElement('div');
     grid.className = 'categories-grid';
     
-    categories.forEach(category => {
+    categories.forEach((category, index) => {
         const card = document.createElement('div');
         card.className = 'category-card';
         card.dataset.categoryId = category.id;
+        card.style.animationDelay = `${index * 0.1}s`;
         
         const repoCount = allRepositories.filter(r => r.category_id === category.id).length;
         
@@ -117,8 +118,9 @@ function renderRepositories() {
     const grid = document.createElement('div');
     grid.className = 'repositories-grid';
     
-    filteredRepositories.forEach(repo => {
+    filteredRepositories.forEach((repo, index) => {
         const card = createRepositoryCard(repo);
+        card.style.animationDelay = `${index * 0.05}s`;
         grid.appendChild(card);
     });
     
@@ -141,7 +143,7 @@ function createRepositoryCard(repo) {
                 <a href="${repo.github_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>
             </div>
             <div class="repo-stars">
-                ⭐ ${starsFormatted}
+                ${starsFormatted} stars
             </div>
         </div>
         
