@@ -1,0 +1,97 @@
+{
+  "categories": [
+    {
+      "id": "web-dev",
+      "name": "Web Development",
+      "description": "Frontend, backend, fullstack frameworks, and web development tools",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 100
+    },
+    {
+      "id": "mobile-dev",
+      "name": "Mobile Development",
+      "description": "Mobile frameworks, cross-platform development, and mobile tools",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 60
+    },
+    {
+      "id": "ai-agents",
+      "name": "Artificial Intelligence & Agents",
+      "description": "AI frameworks, LLM tools, autonomous agents, and prompt engineering",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 100
+    },
+    {
+      "id": "ml-dl",
+      "name": "Machine Learning & Deep Learning",
+      "description": "ML frameworks, deep learning libraries, and ML infrastructure",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 100
+    },
+    {
+      "id": "data-science",
+      "name": "Data Science & Analytics",
+      "description": "Data analysis, visualization, statistical tools, and notebooks",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 80
+    },
+    {
+      "id": "data-engineering",
+      "name": "Data Engineering & Big Data",
+      "description": "Data pipelines, ETL tools, big data frameworks, and streaming",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 60
+    },
+    {
+      "id": "devops-cloud",
+      "name": "DevOps, Cloud & Infrastructure",
+      "description": "CI/CD, containerization, cloud infrastructure, and DevOps tools",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 100
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity",
+      "description": "Security tools, penetration testing, cryptography, and security frameworks",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 80
+    },
+    {
+      "id": "embedded-iot",
+      "name": "Embedded Systems & IoT",
+      "description": "Microcontrollers, IoT frameworks, embedded development tools",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 60
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics & Autonomous Systems",
+      "description": "Robotics frameworks, autonomous systems, simulation, and control",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 60
+    },
+    {
+      "id": "programming-languages",
+      "name": "Programming Languages & Core Tools",
+      "description": "Language implementations, compilers, runtime tools, and core libraries",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 100
+    },
+    {
+      "id": "dev-tools",
+      "name": "Developer Tools & Productivity",
+      "description": "IDEs, editors, productivity tools, and developer utilities",
+      "subcategories": ["Learning Resources", "Notable Projects"],
+      "target_count": 100
+    }
+  ],
+  "metadata": {
+    "total_categories": 12,
+    "total_target_repositories": 1000,
+    "selection_criteria": {
+      "min_stars": 5000,
+      "max_inactive_months": 6,
+      "exceptions": ["Embedded Systems & IoT", "Robotics & Autonomous Systems", "some low-level tools"]
+    }
+  }
+}
