@@ -1,6 +1,8 @@
 # Awesome Tech Repos 2026
 
-A curated collection of **~1000 high-quality GitHub repositories** organized by tech domain, helping developers discover the best resources for learning and contributing to open source projects.
+![Awesome Tech Repos 2026 Banner](banner.jpg)
+
+A curated collection of **1000 high-quality GitHub repositories** organized by tech domain, helping developers discover the best resources for learning and contributing to open source projects.
 
 [English](#english) | [Français](#français)
 
@@ -192,6 +194,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <a name="français"></a>
 ## 🌟 Français
+
+![Awesome Tech Repos 2026 Banner](banner.jpg)
 
 ### Présentation
 
