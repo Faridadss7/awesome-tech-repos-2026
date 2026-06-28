@@ -1,5 +1,6 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages - Fixed
 
+# Simple workflow for deploying static content to GitHub Pages
 on:
   push:
     branches: [ main ]
