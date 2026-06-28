@@ -1,0 +1,44 @@
+{
+  "discovered_repositories": [
+    {
+      "repository": "nuysoft/Mock",
+      "name": "Mock",
+      "stars": 19606,
+      "github_url": "https://github.com/nuysoft/Mock",
+      "description": "A simulation data generator",
+      "language": "JavaScript",
+      "category": "Robotics & Autonomous Systems",
+      "category_id": "robotics",
+      "subcategory": "Notable Projects",
+      "tags": [],
+      "why_recommended": "Popular Robotics & Autonomous Systems repository with 19606 stars and active development.",
+      "learning_level": "Intermediate",
+      "last_updated": "2026-06-26T12:52:25Z",
+      "added_date": "2026-06-28",
+      "is_active": true
+    },
+    {
+      "repository": "PavelDoGreat/WebGL-Fluid-Simulation",
+      "name": "WebGL-Fluid-Simulation",
+      "stars": 16442,
+      "github_url": "https://github.com/PavelDoGreat/WebGL-Fluid-Simulation",
+      "description": "Play with fluids in your browser (works even on mobile)",
+      "language": "JavaScript",
+      "category": "Robotics & Autonomous Systems",
+      "category_id": "robotics",
+      "subcategory": "Notable Projects",
+      "tags": [],
+      "why_recommended": "Popular Robotics & Autonomous Systems repository with 16442 stars and active development.",
+      "learning_level": "Intermediate",
+      "last_updated": "2026-06-28T10:11:44Z",
+      "added_date": "2026-06-28",
+      "is_active": true
+    }
+  ],
+  "metadata": {
+    "total_discovered": 2,
+    "discovery_date": "2026-06-28",
+    "category": "Robotics & Autonomous Systems",
+    "category_id": "robotics"
+  }
+}
