@@ -1220,73 +1220,257 @@ footer a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    header {
+        padding: 1.5rem 0 2rem 0;
+    }
+
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        letter-spacing: -0.01em;
     }
-    
-    .stats {
-        gap: 1.5rem;
+
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
-    
-    .search-section {
+
+    .header-top {
         flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
-    
+
+    .header-actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
+        width: 44px;
+        height: 44px;
+    }
+
+    .banner img {
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .stats {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .stat {
+        padding: 0.75rem 1rem;
+        min-width: 90px;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    /* ✅ CORRECTION CRITIQUE — search section VISIBLE sur mobile */
+    .search-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 12px;
+    }
+
     #search-input,
     #category-filter,
     #level-filter,
     #type-filter,
     #sort-filter {
         width: 100%;
-    }
-    
-    .repositories-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .header-top {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .theme-toggle {
-        margin-left: 0;
-        margin-top: 1rem;
+        min-width: unset;
+        padding: 0.875rem 1rem;
+        font-size: 16px; /* évite le zoom auto sur Android/iOS */
+        border-radius: 10px;
     }
 
     .mobile-menu-toggle {
         display: flex;
+        width: 44px;
+        height: 44px;
     }
 
-    .search-section {
-        display: none;
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .category-card {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .category-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .repositories-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .repo-card {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .repo-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .repo-name {
+        font-size: 1.1rem;
+        word-break: break-word;
+    }
+
+    .repo-stars {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.75rem;
+    }
+
+    .repo-description {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .repo-meta {
+        gap: 0.4rem;
+    }
+
+    .repo-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .repo-tag:hover {
+        transform: none;
+    }
+
+    .why-recommended {
+        font-size: 0.82rem;
+        padding: 0.75rem;
+    }
+
+    .repo-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding-top: 0.75rem;
+    }
+
+    /* Désactiver les hover sur tactile */
+    .repo-card:hover,
+    .category-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-md);
+    }
+
+    .pagination-container {
+        gap: 0.75rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .pagination-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .page-info {
+        font-size: 0.85rem;
+    }
+
+    .mobile-menu-content {
+        width: 95%;
+        padding: 1.5rem;
+        max-height: 90vh;
+        overflow-y: auto;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
     .repositories-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     header h1 {
         font-size: 2.5rem;
     }
+
+    .stats {
+        gap: 2rem;
+    }
 }
 
 /* === Très petits écrans (< 380px) === */
 @media (max-width: 380px) {
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
     .stats {
         flex-direction: column;
         align-items: center;
     }
+
+    .stat {
+        min-width: 75px;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .stat-number {
+        font-size: 1.3rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
     .search-section {
         flex-direction: column;
     }
+
     .search-section input,
     .search-section select {
         width: 100%;
+        font-size: 16px;
     }
-    h1 {
-        font-size: 1.4rem;
+
+    .repo-name {
+        font-size: 1rem;
+    }
+
+    .pagination-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
     }
 }
