@@ -402,9 +402,10 @@ Ce projet est licencié sous la Licence MIT - voir le fichier [LICENSE](LICENSE)
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/yourusername/awesome-tech-repos-2026)
-- [Issues](https://github.com/yourusername/awesome-tech-repos-2026/issues)
+- [GitHub Repository](https://github.com/Faridadss7/awesome-tech-repos-2026)
+- [Issues](https://github.com/Faridadss7/awesome-tech-repos-2026/issues)
 - [Contributing](CONTRIBUTING.md)
+- [Web site](https://faridadss7.github.io/awesome-tech-repos-2026/)
 
 ---
 
