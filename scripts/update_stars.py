@@ -87,7 +87,13 @@ class GitHubDataUpdater:
         
         # Update fields
         repo["stars"] = repo_data.get("stargazers_count", repo["stars"])
-        repo["last_updated"] = repo_data.get("pushed_at", repo["last_updated"])
+
+        # Ensure last_updated is always set with proper format
+        if 'pushed_at' in repo_data and repo_data['pushed_at']:
+            repo["last_updated"] = repo_data['pushed_at'][:10]  # Format YYYY-MM-DD
+        elif not repo.get("last_updated"):
+            # If no pushed_at and no existing last_updated, set to current date
+            repo["last_updated"] = datetime.now().strftime("%Y-%m-%d")
         
         # Check if active (updated within 6 months)
         if repo["last_updated"]:
@@ -137,9 +143,9 @@ class GitHubDataUpdater:
         self.data["repositories"] = self.repositories
         self.data["metadata"]["total_repositories"] = len(self.repositories)
         self.data["metadata"]["last_updated"] = datetime.now().strftime("%Y-%m-%d")
-        
+
         with open(self.data_file, 'w', encoding='utf-8') as f:
-            json.dump(self.data, f, indent=2, ensure_ascii=False)
+            json.dump(self.data, f, separators=(',', ':'), ensure_ascii=False)
 
         print(f"Saved updated data to {self.data_file}")
 

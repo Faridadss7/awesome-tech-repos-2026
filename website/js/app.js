@@ -140,30 +140,52 @@ async function loadCategories() {
 
 // Load repositories data
 async function loadRepositories() {
+    const CACHE_KEY = 'repos_cache';
+    const CACHE_TTL = 24 * 60 * 60 * 1000; // 24h en ms
     const apiLoadStart = performance.now();
 
     try {
-        // Show skeleton loader initially
         renderSkeletonLoader();
 
-        // Fetch fresh data
-        const response = await fetch(`${API_BASE_URL}/repositories.json`);
-        console.log('Response status:', response.status);
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        // Vérifier le cache localStorage
+        let data = null;
+        try {
+            const cached = localStorage.getItem(CACHE_KEY);
+            if (cached) {
+                const { payload, timestamp } = JSON.parse(cached);
+                if (Date.now() - timestamp < CACHE_TTL) {
+                    data = payload;
+                    console.log('Loaded from cache');
+                }
+            }
+        } catch (e) {
+            console.warn('Cache read failed:', e);
         }
 
-        const data = await response.json();
-        console.log('Loaded repositories count:', data.repositories?.length || 0);
+        // Fetch si pas de cache valide
+        if (!data) {
+            const response = await fetch(`${API_BASE_URL}/repositories.json`);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            data = await response.json();
+
+            // Stocker dans le cache
+            try {
+                localStorage.setItem(CACHE_KEY, JSON.stringify({
+                    payload: data,
+                    timestamp: Date.now()
+                }));
+            } catch (e) {
+                console.warn('Cache write failed (quota exceeded?):', e);
+            }
+        }
 
         allRepositories = data.repositories;
         filteredRepositories = [...allRepositories];
-
         performanceMetrics.apiLoadTime = performance.now() - apiLoadStart;
 
         updateStats();
         renderRepositories();
+
     } catch (error) {
         console.error('Error loading repositories:', error);
         showLoadingError();
@@ -616,7 +638,7 @@ function showEmptyState(searchTerm = '') {
 }
 
 // Update pagination controls
-function updatePaginationControls(totalPages: number) {
+function updatePaginationControls(totalPages) {
     const prevPageBtn = document.getElementById('prev-page');
     const nextPageBtn = document.getElementById('next-page');
     const pageInfo = document.getElementById('page-info');
@@ -666,7 +688,7 @@ function setupThemeToggle() {
 }
 
 function updateThemeIcon(theme, icon) {
-    icon.textContent = 'Theme';
+    icon.textContent = theme === 'dark' ? '☀️' : '🌙';
 }
 
 // Update category counts after repositories are loaded

@@ -131,7 +131,7 @@ The "why_recommended" field should:
 1. Fork the repository
 2. Clone your fork:
    ```bash
-   git clone https://github.com/yourusername/awesome-tech-repos-2026.git
+   git clone https://github.com/Faridadss7/awesome-tech-repos-2026.git
    cd awesome-tech-repos-2026
    ```
 

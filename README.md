@@ -150,7 +150,7 @@ Each repository in the database follows this schema:
   "description": "Repository description",
   "why_recommended": "Why this repository is recommended",
   "learning_level": "Intermediate",
-  "last_updated": "2025-01-15",
+  "last_updated": "2026-06-29",
   "added_date": "2025-01-01",
   "is_active": true
 }
@@ -336,7 +336,7 @@ Chaque dépôt dans la base de données suit ce schéma :
   "description": "Description du dépôt",
   "why_recommended": "Pourquoi ce dépôt est recommandé",
   "learning_level": "Intermediate",
-  "last_updated": "2025-01-15",
+  "last_updated": "2026-06-29",
   "added_date": "2025-01-01",
   "is_active": true
 }
@@ -395,10 +395,10 @@ Ce projet est licencié sous la Licence MIT - voir le fichier [LICENSE](LICENSE)
 
 ## 📊 Current Status
 
-- **Total Repositories**: 7 (sample) / ~250 (to be converted)
+- **Total Repositories**: ✅ 1,000 / 1,000 — COMPLETED
 - **Categories**: 12
-- **Target**: 1,000 repositories
-- **Last Updated**: 2025-01-15
+- **Automated Updates**: Every week via GitHub Actions
+- **Last Updated**: 2026-06-29
 
 ## 🔗 Links
 
