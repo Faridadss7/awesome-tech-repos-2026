@@ -1,6 +1,12 @@
 # Awesome Tech Repos 2026
 
-![Awesome Tech Repos 2026 Banner](banner.jpg)
+![Awesome Tech Repos 2026 Banner](website/banner.jpg)
+
+![GitHub stars](https://img.shields.io/github/stars/Faridadss7/awesome-tech-repos-2026?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/Faridadss7/awesome-tech-repos-2026?style=for-the-badge)
+![License](https://img.shields.io/github/license/Faridadss7/awesome-tech-repos-2026?style=for-the-badge)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/Faridadss7/awesome-tech-repos-2026/update-stars.yml?style=for-the-badge&label=Auto-Update)
+![Repos](https://img.shields.io/badge/Repositories-1000-6366f1?style=for-the-badge)
 
 A curated collection of **1000 high-quality GitHub repositories** organized by tech domain, helping developers discover the best resources for learning and contributing to open source projects.
 
@@ -28,6 +34,15 @@ A curated collection of **1000 high-quality GitHub repositories** organized by t
 - Guide contributors to impactful open-source projects
 - Maintain a clean, scalable, and professional structure
 - Automate data management and updates
+
+### Author
+
+**Created and maintained by** [Yélognisssè Babatoundé Farid ADISSO](https://github.com/Faridadss7)
+
+- **GitHub**: [Faridadss7](https://github.com/Faridadss7)
+- **LinkedIn**: [Yélognisssè Babatoundé Farid ADISSO](https://www.linkedin.com/in/farid-yelogniss%C3%A8-b-adisso-086726384)
+
+This project represents a comprehensive effort to curate and organize the best open-source repositories across 12 major technology domains, providing developers with a reliable resource for discovering high-quality tools and learning materials.
 
 ### Categories
 
@@ -80,7 +95,7 @@ awesome-tech-repos-2026/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/awesome-tech-repos-2026.git
+git clone https://github.com/Faridadss7/awesome-tech-repos-2026.git
 cd awesome-tech-repos-2026
 ```
 
@@ -195,7 +210,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <a name="français"></a>
 ## Français
 
-![Awesome Tech Repos 2026 Banner](banner.jpg)
+![Awesome Tech Repos 2026 Banner](website/banner.jpg)
 
 ### Présentation
 
@@ -266,7 +281,7 @@ awesome-tech-repos-2026/
 
 1. Cloner le dépôt :
 ```bash
-git clone https://github.com/yourusername/awesome-tech-repos-2026.git
+git clone https://github.com/Faridadss7/awesome-tech-repos-2026.git
 cd awesome-tech-repos-2026
 ```
 

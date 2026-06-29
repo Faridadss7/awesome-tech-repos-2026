@@ -6,7 +6,7 @@ Validate repository data against selection criteria.
 import json
 import sys
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Tuple, Optional
 from datetime import datetime, timedelta
 
 # Set UTF-8 encoding for Windows compatibility
@@ -18,12 +18,12 @@ if sys.platform == 'win32':
 
 class DataValidator:
     """Validate repository data against project criteria."""
-    
-    def __init__(self, data_file: str):
+
+    def __init__(self, data_file: str) -> None:
         self.data_file = Path(data_file)
-        self.data = self._load_data()
-        self.repositories = self.data.get("repositories", [])
-        self.criteria = {
+        self.data: Dict = self._load_data()
+        self.repositories: List[Dict] = self.data.get("repositories", [])
+        self.criteria: Dict[str, int | List[str]] = {
             "min_stars": 5000,
             "max_inactive_months": 6,
             "exceptions": ["embedded-iot", "robotics", "cybersecurity"]
@@ -34,9 +34,9 @@ class DataValidator:
         with open(self.data_file, 'r', encoding='utf-8') as f:
             return json.load(f)
     
-    def validate_all(self) -> Dict:
+    def validate_all(self) -> Dict[str, int | List | Dict]:
         """Run all validation checks and return results."""
-        results = {
+        results: Dict[str, int | List | Dict] = {
             "total_repositories": len(self.repositories),
             "valid_repositories": 0,
             "invalid_repositories": 0,
@@ -74,9 +74,9 @@ class DataValidator:
         
         return results
     
-    def _validate_repository(self, repo: Dict) -> tuple[bool, List[str]]:
+    def _validate_repository(self, repo: Dict) -> Tuple[bool, List[str]]:
         """Validate a single repository against criteria."""
-        issues = []
+        issues: List[str] = []
         is_valid = True
         
         # Check required fields
@@ -127,7 +127,7 @@ class DataValidator:
         
         return is_valid, issues
     
-    def print_report(self, results: Dict):
+    def print_report(self, results: Dict[str, int | List | Dict]) -> None:
         """Print validation report."""
         print("\n" + "="*60)
         print("VALIDATION REPORT")
@@ -136,7 +136,7 @@ class DataValidator:
         print(f"Valid: {results['valid_repositories']}")
         print(f"Invalid: {results['invalid_repositories']}")
         print(f"Success rate: {results['valid_repositories']/results['total_repositories']*100:.1f}%")
-        
+
         print("\nBy Category:")
         print("-" * 60)
         for category, stats in results["by_category"].items():
@@ -155,7 +155,7 @@ class DataValidator:
         print("="*60 + "\n")
 
 
-def main():
+def main() -> None:
     """Main function to run validation."""
     import sys
     
@@ -163,20 +163,30 @@ def main():
     data_file = base_dir / "data" / "repositories.json"
     
     if len(sys.argv) > 1:
-        data_file = sys.argv[1]
+        data_file = Path(sys.argv[1])
     
     print(f"Validating data file: {data_file}")
     
-    if not Path(data_file).exists():
+    if not data_file.exists():
         print(f"Error: Data file not found: {data_file}")
         sys.exit(1)
     
-    validator = DataValidator(data_file)
-    results = validator.validate_all()
-    validator.print_report(results)
-    
-    # Exit with error code if there are invalid repositories
-    if results["invalid_repositories"] > 0:
+    try:
+        validator = DataValidator(str(data_file))
+        results = validator.validate_all()
+        validator.print_report(results)
+        
+        # Exit with error code if there are invalid repositories
+        if results["invalid_repositories"] > 0:
+            print(f"Validation failed: {results['invalid_repositories']} invalid repositories found")
+            sys.exit(1)
+        else:
+            print("Validation passed: All repositories are valid")
+            sys.exit(0)
+    except Exception as e:
+        print(f"Error during validation: {e}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
 
 

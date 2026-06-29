@@ -3,15 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Tech Repos 2026 - Curated GitHub Repositories</title>
-    <meta name="description" content="A curated collection of ~1000 high-quality GitHub repositories organized by tech domain">
+    <title>Awesome Tech Repos 2026 - Curated GitHub Repositories by Yélognisssè Babatoundé Farid ADISSO</title>
+    <meta name="description" content="A curated collection of ~1000 high-quality GitHub repositories organized by tech domain, created and maintained by Yélognisssè Babatoundé Farid ADISSO">
+    <meta name="author" content="Yélognisssè Babatoundé Farid ADISSO">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://faridadss7.github.io/awesome-tech-repos-2026/">
+    <meta property="og:title" content="Awesome Tech Repos 2026 by Yélognisssè Babatoundé Farid ADISSO">
+    <meta property="og:description" content="1000 curated open-source GitHub repositories across 12 tech domains">
+    <meta property="og:image" content="https://faridadss7.github.io/awesome-tech-repos-2026/banner.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://faridadss7.github.io/awesome-tech-repos-2026/">
+    <meta name="twitter:title" content="Awesome Tech Repos 2026 by Yélognisssè Babatoundé Farid ADISSO">
+    <meta name="twitter:description" content="1000 curated open-source GitHub repositories across 12 tech domains">
+    <meta name="twitter:image" content="https://faridadss7.github.io/awesome-tech-repos-2026/banner.jpg">
+    <meta name="twitter:creator" content="@Faridadss7">
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="scroll-reveal">
         <div class="container">
-            <div class="banner">
-                <img src="banner.jpg" alt="Awesome Tech Repos 2026 Banner">
+            <div class="header-top">
+                <div class="banner">
+                    <img src="banner.jpg" alt="Awesome Tech Repos 2026 Banner" loading="lazy">
+                </div>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
             </div>
             <h1>Awesome Tech Repos 2026</h1>
             <p class="subtitle">A curated collection of 1000 high-quality GitHub repositories</p>
@@ -32,10 +59,75 @@
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <h2>Filters</h2>
+                <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu">
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-menu-filters">
+                <div class="mobile-filter-group">
+                    <label for="mobile-search">Search</label>
+                    <input type="text" id="mobile-search" placeholder="Search repositories...">
+                </div>
+                <div class="mobile-filter-group">
+                    <label for="mobile-category">Category</label>
+                    <select id="mobile-category">
+                        <option value="">All Categories</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="mobile-dev">Mobile Development</option>
+                        <option value="ai-agents">AI & Agents</option>
+                        <option value="ml-dl">ML & Deep Learning</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="data-engineering">Data Engineering</option>
+                        <option value="devops-cloud">DevOps & Cloud</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                        <option value="embedded-iot">Embedded & IoT</option>
+                        <option value="robotics">Robotics</option>
+                        <option value="programming-languages">Programming Languages</option>
+                        <option value="dev-tools">Developer Tools</option>
+                    </select>
+                </div>
+                <div class="mobile-filter-group">
+                    <label for="mobile-level">Level</label>
+                    <select id="mobile-level">
+                        <option value="">All Levels</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="mobile-filter-group">
+                    <label for="mobile-type">Type</label>
+                    <select id="mobile-type">
+                        <option value="">All Types</option>
+                        <option value="courses">Courses & Tutorials</option>
+                        <option value="contribution">Contribution Projects</option>
+                        <option value="resources">Contribution Resources</option>
+                    </select>
+                </div>
+                <div class="mobile-filter-group">
+                    <label for="mobile-sort">Sort</label>
+                    <select id="mobile-sort">
+                        <option value="stars-desc">Stars (descending)</option>
+                        <option value="stars-asc">Stars (ascending)</option>
+                        <option value="name-asc">Name A -> Z</option>
+                        <option value="name-desc">Name Z -> A</option>
+                        <option value="added-desc">Recently Added</option>
+                    </select>
+                </div>
+                <button id="mobile-apply-filters" class="mobile-apply-btn">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
     <main class="container">
-        <section class="search-section">
-            <input type="text" id="search-input" placeholder="Search repositories...">
-            <select id="category-filter">
+        <section class="search-section scroll-reveal">
+            <input type="text" id="search-input" placeholder="Search repositories..." aria-label="Search repositories">
+            <select id="category-filter" aria-label="Filter by category">
                 <option value="">All Categories</option>
                 <option value="web-dev">Web Development</option>
                 <option value="mobile-dev">Mobile Development</option>
@@ -50,28 +142,48 @@
                 <option value="programming-languages">Programming Languages</option>
                 <option value="dev-tools">Developer Tools</option>
             </select>
-            <select id="level-filter">
+            <select id="level-filter" aria-label="Filter by learning level">
                 <option value="">All Levels</option>
                 <option value="Beginner">Beginner</option>
                 <option value="Intermediate">Intermediate</option>
                 <option value="Advanced">Advanced</option>
             </select>
+            <select id="type-filter" aria-label="Filter by repository type">
+                <option value="">All Types</option>
+                <option value="courses">Courses & Tutorials</option>
+                <option value="contribution">Contribution Projects</option>
+                <option value="resources">Contribution Resources</option>
+            </select>
+            <select id="sort-filter" aria-label="Sort repositories">
+                <option value="stars-desc">Stars (descending)</option>
+                <option value="stars-asc">Stars (ascending)</option>
+                <option value="name-asc">Name A -> Z</option>
+                <option value="name-desc">Name Z -> A</option>
+                <option value="added-desc">Recently Added</option>
+            </select>
         </section>
 
-        <section id="categories-container">
+        <section id="categories-container" class="scroll-reveal">
             <!-- Categories will be dynamically loaded here -->
         </section>
 
-        <section id="repositories-container">
+        <section id="repositories-container" class="scroll-reveal">
             <!-- Repositories will be dynamically loaded here -->
+        </section>
+
+        <section class="pagination-container scroll-reveal">
+            <button id="prev-page" class="pagination-btn" disabled aria-label="Previous page">Previous</button>
+            <span id="page-info" class="page-info" aria-live="polite">Page 1 of 1</span>
+            <button id="next-page" class="pagination-btn" disabled aria-label="Next page">Next</button>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Awesome Tech Repos 2026. Built for the open-source community.</p>
+            <p>&copy; 2026 Awesome Tech Repos 2026. Created and maintained by <a href="https://github.com/Faridadss7" target="_blank" rel="noopener noreferrer">Yélognisssè Babatoundé Farid ADISSO</a>. Built for the open-source community.</p>
             <p>
                 <a href="https://github.com/Faridadss7/awesome-tech-repos-2026" target="_blank" rel="noopener noreferrer">GitHub Repository</a> |
+                <a href="https://www.linkedin.com/in/farid-yelogniss%C3%A8-b-adisso-086726384" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
                 <a href="https://github.com/Faridadss7/awesome-tech-repos-2026/issues" target="_blank" rel="noopener noreferrer">Report Issue</a>
             </p>
         </div>

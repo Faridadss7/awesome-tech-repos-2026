@@ -1,5 +1,10 @@
 # Contributing to Awesome Tech Repos 2026
 
+**Project created and maintained by [Yélognisssè Babatoundé Farid ADISSO](https://github.com/Faridadss7)**
+
+- **GitHub**: [Faridadss7](https://github.com/Faridadss7)
+- **LinkedIn**: [Yélognisssè Babatoundé Farid ADISSO](https://www.linkedin.com/in/farid-yelogniss%C3%A8-b-adisso-086726384)
+
 Thank you for your interest in contributing to Awesome Tech Repos 2026! This document provides guidelines and instructions for contributing.
 
 ## 🤝 How to Contribute
