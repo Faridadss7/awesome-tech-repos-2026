@@ -364,9 +364,14 @@ function renderRepositories() {
     container.innerHTML = '';
     container.appendChild(grid);
 
+    // Fix scroll-reveal mobile
+    container.classList.add('revealed');
+    container.style.opacity = '1';
+    container.style.transform = 'none';
+
     // Update pagination controls
     updatePaginationControls(totalPages);
-    
+
     performanceMetrics.renderTime = performance.now() - renderStart;
 }
 
@@ -402,6 +407,11 @@ function renderSkeletonLoader() {
 
     container.innerHTML = '';
     container.appendChild(grid);
+
+    // Fix scroll-reveal mobile
+    container.classList.add('revealed');
+    container.style.opacity = '1';
+    container.style.transform = 'none';
 }
 
 // Create repository card
@@ -635,6 +645,11 @@ function showEmptyState(searchTerm = '') {
             </div>
         </div>
     `;
+
+    // Fix scroll-reveal mobile
+    container.classList.add('revealed');
+    container.style.opacity = '1';
+    container.style.transform = 'none';
 }
 
 // Update pagination controls

@@ -1474,3 +1474,11 @@ footer a:hover {
         font-size: 0.8rem;
     }
 }
+
+/* Fix mobile — containers dynamiques toujours visibles */
+#repositories-container,
+#categories-container {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
