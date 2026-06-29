@@ -143,46 +143,26 @@ async function loadCategories() {
 // Load repositories data
 async function loadRepositories() {
     const apiLoadStart = performance.now();
-    
+
     try {
         // Show skeleton loader initially
         renderSkeletonLoader();
 
-        const CACHE_KEY = 'repos_cache';
-        const CACHE_TTL = 24 * 60 * 60 * 1000; // 24h en ms
-
-        // Check cache first
-        const cached = localStorage.getItem(CACHE_KEY);
-        if (cached) {
-            try {
-                const { data, timestamp } = JSON.parse(cached);
-                if (Date.now() - timestamp < CACHE_TTL) {
-                    console.log('Using cached data');
-                    allRepositories = data.repositories;
-                    filteredRepositories = [...allRepositories];
-                    performanceMetrics.apiLoadTime = performance.now() - apiLoadStart;
-                    updateStats();
-                    renderRepositories();
-                    return;
-                }
-            } catch (e) {
-                console.log('Cache parsing error, fetching fresh data');
-            }
-        }
-
         // Fetch fresh data
         const response = await fetch(`${API_BASE_URL}/repositories.json`);
+        console.log('Response status:', response.status);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const data = await response.json();
+        console.log('Loaded repositories count:', data.repositories?.length || 0);
+
         allRepositories = data.repositories;
         filteredRepositories = [...allRepositories];
-        
-        performanceMetrics.apiLoadTime = performance.now() - apiLoadStart;
 
-        // Store in cache
-        localStorage.setItem(CACHE_KEY, JSON.stringify({
-            data: data,
-            timestamp: Date.now()
-        }));
+        performanceMetrics.apiLoadTime = performance.now() - apiLoadStart;
 
         updateStats();
         renderRepositories();
