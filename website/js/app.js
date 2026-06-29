@@ -24,11 +24,9 @@ function initPerformanceMonitoring() {
         window.addEventListener('load', () => {
             performanceMetrics.pageLoadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
             performanceMetrics.domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
-            
+
             // Log to console for development
-            if (process.env.NODE_ENV === 'development') {
-                console.log('Performance Metrics:', performanceMetrics);
-            }
+            console.log('Performance Metrics:', performanceMetrics);
         });
     }
 }
