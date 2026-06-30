@@ -716,6 +716,15 @@ header h1 {
     transition: all 0.1s var(--transition-smooth);
 }
 
+.repo-card:focus {
+    outline: none;
+}
+
+.repo-card:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
