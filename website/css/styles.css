@@ -717,12 +717,18 @@ header h1 {
 }
 
 .repo-card:focus {
-    outline: none;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .repo-card:focus-visible {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.repo-card:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 @keyframes fadeIn {
@@ -911,6 +917,15 @@ header h1 {
     margin-top: 1rem;
     border-left: 3px solid var(--accent-color);
     line-height: 1.6;
+    outline: none;
+}
+
+.why-recommended:focus {
+    outline: none !important;
+}
+
+.why-recommended:focus-visible {
+    outline: none !important;
 }
 
 /* Footer */
